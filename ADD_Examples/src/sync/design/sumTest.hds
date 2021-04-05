@@ -1,0 +1,39 @@
+# hades.models.Design file
+#  
+[name] 4afus
+[components]
+add.dataflow.sync.SyncIn in7 16200 9600 @N 1001 18 1.0E-8 3
+add.dataflow.sync.SyncIn in6 16200 7200 @N 1001 18 1.0E-8 3
+add.dataflow.sync.SyncIn in5 16200 4200 @N 1001 18 1.0E-8 2
+add.dataflow.sync.SyncIn in4 16200 1800 @N 1001 18 1.0E-8 2
+add.dataflow.sync.SyncIn in3 7200 9600 @N 1001 18 1.0E-8 1
+add.dataflow.sync.SyncIn in2 7200 7200 @N 1001 18 1.0E-8 1
+add.dataflow.sync.SyncIn in1 7200 4200 @N 1001 18 1.0E-8 0
+add.dataflow.base.ClkConnector CLKCONNECTOR 2400 4800 @N 1001 1
+add.dataflow.sync.SyncIn in0 7200 1800 @N 1001 18 1.0E-8 0
+add.dataflow.base.Clock CLOCK 2400 600 @N 1001 0.1 0.5 0.0
+add.dataflow.sync.SyncOut out3 21600 7200 @N 1001 18 1.0E-8 3
+add.dataflow.sync.SyncOut out2 21600 1800 @N 1001 18 1.0E-8 2
+add.dataflow.sync.SyncOut out1 12600 7200 @N 1001 18 1.0E-8 1
+add.dataflow.sync.SyncAdd add3 19200 7200 @N 1001 18 1.0E-8 3
+add.dataflow.sync.SyncOut out0 12600 1800 @N 1001 18 1.0E-8 0
+add.dataflow.sync.SyncAdd add2 19200 1800 @N 1001 18 1.0E-8 2
+add.dataflow.sync.SyncAdd add1 10200 7200 @N 1001 18 1.0E-8 1
+add.dataflow.sync.SyncAdd add0 10200 1800 @N 1001 18 1.0E-8 0
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 clk_wire 17 CLOCK clk in7 clk in6 clk in5 clk in4 clk in3 clk in2 clk in1 clk in0 clk out3 clk out2 clk out1 clk add3 clk out0 clk add2 clk add1 clk add0 clk 0 0 
+hades.signals.SignalStdLogicVector n9 18 2 add3 dout0 out3 din0 1 2 21600 7800 21000 7800 0 
+hades.signals.SignalStdLogicVector n8 18 2 add2 dout0 out2 din0 1 2 21000 2400 21600 2400 0 
+hades.signals.SignalStdLogicVector n7 18 2 in5 dout0 add2 din1 3 2 19200 3000 18600 3000 2 18600 3000 18600 4800 2 18600 4800 18000 4800 0 
+hades.signals.SignalStdLogicVector n6 18 2 in4 dout0 add2 din0 1 2 18000 2400 19200 2400 0 
+hades.signals.SignalStdLogicVector n5 18 2 in3 dout0 add1 din1 3 2 10200 8400 9600 8400 2 9600 8400 9600 10200 2 9600 10200 9000 10200 0 
+hades.signals.SignalStdLogicVector n4 18 2 in2 dout0 add1 din0 1 2 10200 7800 9000 7800 0 
+hades.signals.SignalStdLogicVector n3 18 2 add1 dout0 out1 din0 1 2 12000 7800 12600 7800 0 
+hades.signals.SignalStdLogicVector n2 18 2 add0 dout0 out0 din0 1 2 12000 2400 12600 2400 0 
+hades.signals.SignalStdLogicVector n1 18 2 in1 dout0 add0 din1 3 2 10200 3000 9600 3000 2 9600 3000 9600 4800 2 9600 4800 9000 4800 0 
+hades.signals.SignalStdLogicVector n0 18 2 in0 dout0 add0 din0 1 2 9000 2400 10200 2400 0 
+hades.signals.SignalStdLogicVector n11 18 2 in7 dout0 add3 din1 3 2 19200 8400 18600 8400 2 18600 8400 18600 10200 2 18600 10200 18000 10200 0 
+hades.signals.SignalStdLogicVector n10 18 2 in6 dout0 add3 din0 1 2 19200 7800 18000 7800 0 
+[end signals]
+[end]

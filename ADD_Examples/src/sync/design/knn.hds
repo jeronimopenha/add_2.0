@@ -1,0 +1,80 @@
+# hades.models.Design file
+#  
+[name] KNN_DFG1
+[components]
+add.dataflow.sync.SyncRegister i21 10200 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i20 12600 15600 @N 1001 34 1.0E-8 0
+add.dataflow.base.Clock CLOCK 3600 5400 @N 1001 1.0 0.5 0.0
+add.dataflow.sync.SyncKnnQueue i9 20400 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i8 26400 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncSubI i7 10200 6000 @N 1001 34 1.0E-8 1 0 0
+add.dataflow.sync.SyncRegister i6 17400 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i5 17400 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i4 23400 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i3 20400 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnCtrl i2 23400 7800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnCtrl i1 20400 7800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnCtrl i0 17400 7800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i19 10200 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncAbs i18 12600 8400 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncAbs i17 12600 6000 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i16 26400 15600 @N 1001 34 1.0E-8 0
+add.dataflow.base.ClkConnector CLKCONNECTOR 3600 9600 @N 1001 1
+add.dataflow.sync.SyncKnnQueue i15 23400 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i14 20400 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i13 17400 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncSubI i12 10200 8400 @N 1001 34 1.0E-8 2 0 0
+add.dataflow.sync.SyncKnnQueue i11 26400 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncKnnQueue i10 23400 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncIn in2 6600 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncIn in1 6600 8400 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncIn in0 6600 6000 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncOut out2 28800 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncOut out1 28800 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncOut out0 28800 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i28 15000 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i27 15000 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i26 15000 15600 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncAdd i25 15000 7800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i24 12600 10800 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i23 12600 13200 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncRegister i22 10200 13200 @N 1001 34 1.0E-8 0
+[end components]
+[signals]
+hades.signals.SignalStdLogicVector n33 34 2 i1 dout0 i2 din0 1 2 22200 8400 23400 8400 0 
+hades.signals.SignalStdLogicVector n32 34 2 i0 dout0 i1 din0 1 2 19200 8400 20400 8400 0 
+hades.signals.SignalStdLogicVector n31 2 4 i0 dout1 i14 din0 i9 din0 i3 din0 7 2 20400 15600 19800 15600 2 19800 15600 19800 13200 2 20400 13200 19800 13200 2 19800 13200 19800 10800 2 19200 9000 19800 9000 2 19800 9000 19800 10800 2 19800 10800 20400 10800 2 19800 10800 19800 13200 
+hades.signals.SignalStdLogicVector n30 2 4 i2 dout1 i8 din0 i11 din0 i16 din0 7 2 26400 10800 25800 10800 2 26400 13200 25800 13200 2 25200 9000 25800 9000 2 25800 15600 26400 15600 2 25800 15600 25800 13200 2 25800 9000 25800 10800 2 25800 13200 25800 10800 2 25800 13200 25800 10800 
+hades.signals.SignalStdLogicVector n9 34 2 i15 dout0 i16 din1 1 2 25200 16200 26400 16200 0 
+hades.signals.SignalStdLogicVector n8 34 2 i14 dout0 i15 din1 1 2 22200 16200 23400 16200 0 
+hades.signals.SignalStdLogicVector n7 34 2 i13 dout0 i14 din1 1 2 19200 16200 20400 16200 0 
+hades.signals.SignalStdLogicVector n6 34 2 i24 dout0 i28 din0 1 2 14400 11400 15000 11400 0 
+hades.signals.SignalStdLogicVector n19 34 2 i23 dout0 i27 din0 1 2 15000 13800 14400 13800 0 
+hades.signals.SignalStdLogicVector n5 34 2 i19 dout0 i20 din0 1 2 12000 16200 12600 16200 0 
+hades.signals.SignalStdLogicVector n18 34 2 i22 dout0 i23 din0 1 2 12000 13800 12600 13800 0 
+hades.signals.SignalStdLogicVector n4 34 2 in2 dout0 i19 din0 1 2 8400 16200 10200 16200 0 
+hades.signals.SignalStdLogicVector n17 34 3 in0 dout0 i21 din0 i7 din0 4 2 10200 11400 9600 11400 2 9600 11400 9600 6600 2 8400 6600 9600 6600 2 10200 6600 9600 6600 1 9600 6600 
+hades.signals.SignalStdLogicVector n3 34 2 i12 dout0 i18 din0 1 2 12000 9000 12600 9000 0 
+hades.signals.SignalStdLogicVector n16 34 3 in1 dout0 i22 din0 i12 din0 4 2 10200 13800 9000 13800 2 9000 13800 9000 9000 2 10200 9000 9000 9000 2 8400 9000 9000 9000 1 9000 9000 
+hades.signals.SignalStdLogicVector n2 34 2 i7 dout0 i17 din0 1 2 12000 6600 12600 6600 0 
+hades.signals.SignalStdLogicVector n15 34 2 i21 dout0 i24 din0 1 2 12000 11400 12600 11400 0 
+hades.signals.SignalStdLogicVector n1 34 2 i18 dout0 i25 din1 1 2 14400 9000 15000 9000 0 
+hades.signals.SignalStdLogicVector n14 34 2 i6 dout0 i9 din1 1 2 20400 13800 19200 13800 0 
+hades.signals.SignalStdLogicVector n0 34 2 i17 dout0 i25 din0 1 2 14400 6600 15000 8400 0 
+hades.signals.SignalStdLogicVector n13 34 2 i9 dout0 i10 din1 1 2 23400 13800 22200 13800 0 
+hades.signals.SignalStdLogicVector n12 34 2 i10 dout0 i11 din1 1 2 26400 13800 25200 13800 0 
+hades.signals.SignalStdLogicVector n11 34 2 i11 dout0 out1 din0 1 2 28800 13800 28200 13800 0 
+hades.signals.SignalStdLogicVector n10 34 2 i16 dout0 out2 din0 1 2 28200 16200 28800 16200 0 
+hades.signals.SignalStdLogic1164 clk_wire 36 CLOCK clk i21 clk i20 clk i9 clk i8 clk i7 clk i6 clk i5 clk i4 clk i3 clk i2 clk i1 clk i0 clk i19 clk i18 clk i17 clk i16 clk i15 clk i14 clk i13 clk i12 clk i11 clk i10 clk in2 clk in1 clk in0 clk out2 clk out1 clk out0 clk i28 clk i27 clk i26 clk i25 clk i24 clk i23 clk i22 clk 0 0 
+hades.signals.SignalStdLogicVector n29 2 4 i1 dout1 i4 din0 i10 din0 i15 din0 7 2 23400 10800 22800 10800 2 23400 13200 22800 13200 2 22200 9000 22800 9000 2 22800 15600 23400 15600 2 22800 15600 22800 13200 2 22800 9000 22800 10800 2 22800 13200 22800 10800 2 22800 13200 22800 10800 
+hades.signals.SignalStdLogicVector n28 34 2 i8 dout0 out0 din0 1 2 28200 11400 28800 11400 0 
+hades.signals.SignalStdLogicVector n27 34 2 i4 dout0 i8 din1 1 2 25200 11400 26400 11400 0 
+hades.signals.SignalStdLogicVector n26 34 2 i3 dout0 i4 din1 1 2 22200 11400 23400 11400 0 
+hades.signals.SignalStdLogicVector n25 34 2 i5 dout0 i3 din1 1 2 19200 11400 20400 11400 0 
+hades.signals.SignalStdLogicVector n24 34 2 i25 dout0 i0 din0 1 2 16800 8400 17400 8400 0 
+hades.signals.SignalStdLogicVector n23 34 2 i28 dout0 i5 din0 1 2 16800 11400 17400 11400 0 
+hades.signals.SignalStdLogicVector n22 34 2 i27 dout0 i6 din0 1 2 17400 13800 16800 13800 0 
+hades.signals.SignalStdLogicVector n21 34 2 i26 dout0 i13 din0 1 2 16800 16200 17400 16200 0 
+hades.signals.SignalStdLogicVector n20 34 2 i20 dout0 i26 din0 1 2 14400 16200 15000 16200 0 
+[end signals]
+[end]

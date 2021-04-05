@@ -1,0 +1,24 @@
+# hades.models.Design file
+#  
+[name] unnamed
+[components]
+add.dataflow.sync.SyncConst i7 7200 3000 @N 1001 3 1.0E-8 4 0 0
+add.dataflow.sync.SyncAdd i5 15000 3000 @N 1001 18 1.0E-8 0
+add.dataflow.sync.SyncRegister i4 12000 6000 @N 1001 18 1.0E-8 0
+add.dataflow.sync.SyncCounter i3 9600 3000 @N 1001 18 1.0E-8 3 0 31 1 0
+add.dataflow.sync.SyncMemory i2 12000 3000 @N 1001 18 1.0E-8 1 1 0
+add.dataflow.sync.SyncOut i1 17400 3000 @N 1001 18 1.0E-8 0
+add.dataflow.sync.SyncIn i0 9600 6000 @N 1001 18 1.0E-8 0
+add.dataflow.base.Clock CLOCK 2400 600 @N 1001 1.0 0.5 0.0
+add.dataflow.base.ClkConnector CLKCONNECTOR 2400 4800 @N 1001 1
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 clk_wire 8 CLOCK clk i7 clk i5 clk i4 clk i3 clk i2 clk i1 clk i0 clk 0 0 
+hades.signals.SignalStdLogicVector n6 1 2 i7 dout0 i3 set0 1 2 9000 3600 9600 3600 0 
+hades.signals.SignalStdLogicVector n4 18 2 i0 dout0 i4 din0 1 2 11400 6600 12000 6600 0 
+hades.signals.SignalStdLogicVector n3 18 2 i5 dout0 i1 din0 1 2 16800 3600 17400 3600 0 
+hades.signals.SignalStdLogicVector n2 18 2 i2 dout0 i5 din0 1 2 15000 3600 13800 3600 0 
+hades.signals.SignalStdLogicVector n1 18 2 i4 dout0 i5 din1 3 2 13800 6600 14400 6600 2 14400 6600 14400 4200 2 14400 4200 15000 4200 0 
+hades.signals.SignalStdLogicVector n0 18 2 i3 dout0 i2 din0 1 2 11400 3600 12000 3600 0 
+[end signals]
+[end]

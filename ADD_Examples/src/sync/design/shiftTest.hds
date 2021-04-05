@@ -1,0 +1,16 @@
+# hades.models.Design file
+#  
+[name] unnamed
+[components]
+add.dataflow.sync.SyncOut out0 20400 6000 @N 1001 34 1.0E-8 0
+add.dataflow.sync.SyncShlI i2 17400 6000 @N 1001 34 1.0E-8 1 4 0
+add.dataflow.sync.SyncIn in0 13800 6000 @N 1001 34 1.0E-8 0
+add.dataflow.base.ClkConnector CLKCONNECTOR 2400 4800 @N 1001 1
+add.dataflow.base.Clock CLOCK 2400 600 @N 1001 1.0 0.5 0.0
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 clk_wire 4 CLOCK clk out0 clk i2 clk in0 clk 0 0 
+hades.signals.SignalStdLogicVector n1 34 2 i2 dout0 out0 din0 1 2 19200 6600 20400 6600 0 
+hades.signals.SignalStdLogicVector n0 34 2 in0 dout0 i2 din0 1 2 15600 6600 17400 6600 0 
+[end signals]
+[end]
